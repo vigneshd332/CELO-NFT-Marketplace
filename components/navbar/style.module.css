@@ -1,0 +1,135 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 35px 0;
+    /* position: sticky; */
+    top: 0;
+    background-color: var(--primaryColor);
+    border-bottom: var(--borderColor) 1px solid;
+}
+
+.img {
+    cursor: pointer;
+}
+
+.mobileMenu {
+    z-index: 2;
+    position: absolute;
+}
+
+.searchContainer {
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.formTextInput {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--seller-card-border);
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: var(--formInputColor);
+    color: var(--primarytextColor);
+}
+
+.formTextInput input {
+    border: none;
+    margin-top: 2px;
+    margin-left: 14px;
+    width: 100%;
+    outline: none;
+    background-color: var(--formInputColor);
+    color: var(--primarytextColor);
+}
+
+::placeholder {
+    color: var(--primaryGrey);
+    margin-top: 5px;
+}
+
+.navLink {
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: #888888;
+}
+
+.navLinkActive,
+.navLink:hover {
+    color: var(--secondarytextColor);
+}
+
+.button {
+    background: linear-gradient(to right, #eb1484, #c81cc5);
+    cursor: pointer;
+    padding: 9px 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.buttonOutline {
+    padding: 9px 30px;
+    cursor: pointer;
+    outline: none;
+    color: #da18a3;
+    font-weight: bold;
+
+    border: 1px solid transparent;
+    background: linear-gradient(var(--primaryColor), var(--primaryColor)) padding-box,
+        linear-gradient(to right, #eb1484, #c81cc5) border-box;
+    border-radius: 10px;
+}
+
+.menu {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .img {
+        content: url('../../images/Light.png') !important;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .searchContainer {
+        width: 30%;
+    }
+
+    .navLink {
+        font-size: 13px;
+    }
+
+    .button,
+    .buttonOutline {
+        font-size: 13px;
+        padding: 5px 20px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        padding: 20px;
+    }
+
+    .searchContainer {
+        margin-left: 10px;
+        width: 60%;
+    }
+    .navLink {
+        display: none;
+    }
+    .button {
+        display: none;
+    }
+    .buttonOutline {
+        display: none;
+    }
+    .menu {
+        display: initial;
+        filter: var(--invert);
+    }
+}
