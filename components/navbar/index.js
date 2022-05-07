@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import styles from "./style.module.css";
 import Link from "next/link";
-import logo from "../../images/Light2.png";
-import logoDark from "../../images/Dark2.png";
-import menu from "../../images/icons/Menu.png";
+import logo from "../../public/images/Light2.png";
+import logoDark from "../../public/images/Dark2.png";
+import menu from "../../public/images/icons/Menu.png";
 import MobileMenu from "../mobileMenu/index.js";
 import Icon from "../Icon/Icon";
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function Nav(props) {
-	const navigate = useNavigate();
 	const [mobileMenu, setMobile] = useState(false);
 	const [searchText, setSearchText] = useState("");
-	const { pathname } = useLocation();
+	const { pathname } = useRouter();
 
 	return (
 		<div>
@@ -20,20 +21,17 @@ export default function Nav(props) {
 			) : null}
 			<div className={styles.container}>
 				<div>
-					{!props.darkMode ? (
-						<Link>
-							<img src={logo} alt="Main Logo" className={styles.img} />
-						</Link>
-					) : (
-						<img
-							src={logoDark}
-							alt="Main Logo"
-							className={styles.img}
-							onClick={() => {
-								navigate("/");
-							}}
-						/>
-					)}
+					<Link href={"/"} passHref>
+						{!props.darkMode ? (
+							<Image src={logo} alt="Main Logo" className={styles.img} />
+						) : (
+							<Image
+								src={logoDark}
+								alt="Main Logo"
+								className={styles.img}
+							/>
+						)}
+					</Link>
 				</div>
 				<div className={styles.searchContainer}>
 					<div className={styles.formTextInput + " " + styles.searchInput}>
@@ -46,58 +44,45 @@ export default function Nav(props) {
 						/>
 					</div>
 				</div>
-				<div
-					className={`${styles.navLink} ${
-						pathname === "/explore" ? styles.navLinkActive : null
-					}`}
-					onClick={() => {
-						navigate("/explore");
-					}}
-				>
-					Explore
-				</div>
-				<div
-					className={`${styles.navLink} ${
-						pathname === "/my-items" ? styles.navLinkActive : null
-					}`}
-					onClick={() => {
-						navigate("/my-items");
-					}}
-				>
-					My Items
-				</div>
-				<div
-					className={`${styles.navLink} ${
-						pathname === "/following" ? styles.navLinkActive : null
-					}`}
-					onClick={() => {
-						navigate("/following");
-					}}
-				>
-					Following
-				</div>
-				<div>
-					<button
-						className={styles.button}
-						onClick={() => {
-							navigate("/create");
-						}}
+				<Link href={"/explore"} passHref>
+					<div
+						className={`${styles.navLink} ${
+							pathname === "/explore" ? styles.navLinkActive : null
+						}`}
 					>
-						Create
-					</button>
-				</div>
-				<div>
-					<button
-						className={styles.buttonOutline}
-						onClick={() => {
-							navigate("/connect");
-						}}
+						Explore
+					</div>
+				</Link>
+				<Link href={"/my-items"} passHref>
+					<div
+						className={`${styles.navLink} ${
+							pathname === "/my-items" ? styles.navLinkActive : null
+						}`}
 					>
-						Connect
-					</button>
-				</div>
+						My Items
+					</div>
+				</Link>
+				<Link href={"/following"} passHref>
+					<div
+						className={`${styles.navLink} ${
+							pathname === "/following" ? styles.navLinkActive : null
+						}`}
+					>
+						Following
+					</div>
+				</Link>
+				<Link href={"/create"} passHref>
+					<div>
+						<button className={styles.button}>Create</button>
+					</div>
+				</Link>
+				<Link href={"/connect"} passHref>
+					<div>
+						<button className={styles.buttonOutline}>Connect</button>
+					</div>
+				</Link>
 				<div>
-					<img
+					<Image
 						src={menu}
 						onClick={() => {
 							setMobile(true);

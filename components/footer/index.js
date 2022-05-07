@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./styles.module.css";
-import logo from "../../images/Light2.png";
-import darkLogo from "../../images/Dark2.png";
-import insta from "../../images/icons/Social/instagram.svg";
-import twitter from "../../images/icons/Social/twitter.svg";
-import telegram from "../../images/icons/Social/telegram.svg";
-import discord from "../../images/icons/Social/discord.svg";
+import logo from "../../public/images/Light2.png";
+import darkLogo from "../../public/images/Dark2.png";
+import insta from "../../public/images/icons/Social/instagram.svg";
+import twitter from "../../public/images/icons/Social/twitter.svg";
+import telegram from "../../public/images/icons/Social/telegram.svg";
+import discord from "../../public/images/icons/Social/discord.svg";
 import Icon from "../Icon/Icon";
+import Image from "next/image";
 
 export default function Footer(props) {
 	return (
@@ -80,22 +81,22 @@ export default function Footer(props) {
 			<section className={styles.copyright}>
 				Graphique NITT, All Rights Reserved.
 				<p className={styles.footerSocialList}>
-					<img
+					<Image
 						src={insta}
 						alt="Insta Logo"
 						className={styles.footerSocialMedia}
 					/>
-					<img
+					<Image
 						src={twitter}
 						alt="Twitter Logo"
 						className={styles.footerSocialMedia}
 					/>
-					<img
+					<Image
 						src={telegram}
 						alt="Telegram Logo"
 						className={styles.footerSocialMedia}
 					/>
-					<img
+					<Image
 						src={discord}
 						alt="Discord Logo"
 						className={styles.footerSocialMedia}

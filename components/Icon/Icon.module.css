@@ -1,0 +1,7 @@
+/* CSS for Icon */
+
+.icon {
+    max-height: 24px;
+    max-width: 24px;
+    filter: var(--invert);
+}

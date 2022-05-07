@@ -1,3 +1,79 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("http://fonts.cdnfonts.com/css/gotham");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins";
+	user-select: none;
+	text-decoration: none;
+}
+
+html {
+	background-color: var(--primaryColor);
+	min-height: 100vh;
+}
+
+body {
+	overflow-x: hidden;
+	min-height: 100vh;
+	font-family: "Gotham", sans-serif;
+}
+
+:root {
+	min-height: 100vh;
+}
+
+.light {
+	--primaryColor: #fff;
+	--primaryGrey: #888888;
+	--borderColor: #e3e1e3;
+	--primarytextColor: #1b1a21;
+	--secondarytextColor: #2d2e36;
+	--card-bg: #fff;
+	--secondaryColor: #2d2e36;
+	--formInputColor: #fff;
+	--secondaryGrey: #e3e1e3;
+	--tertiaryGrey: #4f4f4f;
+	background-color: var(--primaryColor);
+	--invert: invert(0);
+	--seller-card-border: #e3e1e3;
+	--navSearchBG: #fff;
+	--dashedborder: invert(0) sepia(3%) saturate(10%) hue-rotate(8deg)
+		brightness(93%) contrast(92%);
+}
+
+.dark {
+	--primaryColor: #24252d;
+	--primaryGrey: #ffffff;
+	--borderColor: #2d2e36;
+	--primarytextColor: #fff;
+	--secondarytextColor: #fff;
+	--card-bg: #2a2d3a;
+	--secondaryColor: #fff;
+	--formInputColor: #2d2e36;
+	--secondaryGrey: #2d2e36;
+	--tertiaryGrey: #fff;
+	background-color: var(--primaryColor);
+	--invert: invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg)
+		brightness(104%) contrast(104%);
+	--seller-card-border: #2a2d3a;
+	--navSearchBG: #1b1a21;
+	--dashedborder: invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg)
+		brightness(104%) contrast(104%);
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #e3e1e3;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #da18a3;
+	border-radius: 5px;
+}

@@ -1,12 +1,12 @@
 import Navbar from "../navbar";
 import Footer from "../footer";
 
-export default function Layout({ children }) {
+export default function Layout({ children, setDarkMode, darkMode }) {
 	return (
 		<>
-			<Navbar />
+			<Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 			<main>{children}</main>
-			<Footer />
+			<Footer darkMode={darkMode} setDarkMode={setDarkMode} />
 		</>
 	);
 }

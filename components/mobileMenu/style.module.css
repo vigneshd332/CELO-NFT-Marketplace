@@ -1,0 +1,70 @@
+.cont {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--primaryColor);
+    top: 0;
+    overflow: hidden;
+}
+
+.closeButton {
+    filter: var(--invert);
+}
+
+.container {
+    display: flex;
+    border-bottom: var(--borderColor) 1px solid;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px;
+    overflow: hidden;
+}
+
+.navWrapper {
+    margin: 17px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.navLink {
+    margin: 15px 0;
+    color: var(--primarytextColor);
+}
+
+.navFooter {
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    padding: 30px;
+    border-top: var(--borderColor) 1px solid;
+}
+
+.footerWrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button {
+    background: linear-gradient(to right, #eb1484, #c81cc5);
+    cursor: pointer;
+    padding: 9px 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.buttonOutline {
+    padding: 9px 30px;
+    cursor: pointer;
+    outline: none;
+    color: #da18a3;
+    font-weight: bold;
+
+    border: 1px solid transparent;
+    background: linear-gradient(var(--primaryColor), var(--primaryColor))
+            padding-box,
+        linear-gradient(to right, #eb1484, #c81cc5) border-box;
+    border-radius: 10px;
+}
