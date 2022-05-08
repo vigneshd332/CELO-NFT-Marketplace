@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Home.module.css";
 
 import SellerCard from "../SellerCard/SellerCard.js";
@@ -163,20 +163,26 @@ const TopSellers = () => {
 
 const HotBids = () => {
 	// const bidsArray = getProfileItems("");
-	const bidsArray = AllProfileItems;
+	const [NFTs, setNFTs] = useState([]);
+	useEffect(() => {
+		fetch("/api/getpins")
+			.then((res) => res.json())
+			.then((data) => setNFTs(data.data.rows))
+			.catch((err) => console.log(err));
+	}, []);
 
 	return (
 		<div className={classes.sellers}>
 			<div className={classes.sellerTitle}>Hot Bids</div>
 			<div className={classes.hotCont}>
-				{bidsArray.map(({ liked, likes, imgURL, amount, name, id }) => (
-					<div key={name} className={classes.cardWrapper}>
+				{NFTs.map(({ ipfs_pin_hash, id }) => (
+					<div key={id} className={classes.cardWrapper}>
 						<NFTCard
-							liked={liked}
-							likes={likes}
-							imgURL={imgURL}
-							amount={amount}
-							name={name}
+							liked={true}
+							likes={0}
+							imgURL={`https://infura-ipfs.io/ipfs/${ipfs_pin_hash}`}
+							amount={7}
+							name={"Sample"}
 							idx={id}
 						/>
 					</div>

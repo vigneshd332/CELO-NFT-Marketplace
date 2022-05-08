@@ -2,7 +2,6 @@ import React from "react";
 import Icon from "../Icon/Icon";
 import styles from "./NFTCard.module.css";
 import Link from "next/link";
-import Image from "next/image";
 
 // USAGE: <NFTCard imgURL="" name="NFT Name" amount="0.00" liked likes="92" />
 
@@ -11,7 +10,7 @@ function NFTCard(props) {
 		<Link href={`/item/${props.idx}`} passHref>
 			<div className={styles.card}>
 				<div className={styles.imageContainer}>
-					<Image
+					<img
 						className={styles.image}
 						src={props.imgURL}
 						width="100%"
