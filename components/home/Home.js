@@ -175,18 +175,24 @@ const HotBids = () => {
 		<div className={classes.sellers}>
 			<div className={classes.sellerTitle}>Hot Bids</div>
 			<div className={classes.hotCont}>
-				{NFTs.map(({ ipfs_pin_hash, id }) => (
-					<div key={id} className={classes.cardWrapper}>
-						<NFTCard
-							liked={true}
-							likes={0}
-							imgURL={`https://infura-ipfs.io/ipfs/${ipfs_pin_hash}`}
-							amount={7}
-							name={"Sample"}
-							idx={id}
-						/>
-					</div>
-				))}
+				{NFTs.length < 1 ? (
+					<p style={{ color: "#000000" }}>
+						Loading Pins from IPFS, this will take some time
+					</p>
+				) : (
+					NFTs.map(({ ipfs_pin_hash, id }) => (
+						<div key={id} className={classes.cardWrapper}>
+							<NFTCard
+								liked={true}
+								likes={0}
+								imgURL={`https://infura-ipfs.io/ipfs/${ipfs_pin_hash}`}
+								amount={7}
+								name={"Sample"}
+								idx={id}
+							/>
+						</div>
+					))
+				)}
 			</div>
 		</div>
 	);
@@ -202,9 +208,9 @@ export default function HomePage() {
 			<Banner />
 			<TopSellers />
 			<HotBids />
-			<div className={classes.buttonContainer}>
+			{/* <div className={classes.buttonContainer}>
 				<button className={classes.buttonOutline}>Load More</button>
-			</div>
+			</div> */}
 		</div>
 	);
 }
