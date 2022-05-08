@@ -1,0 +1,176 @@
+
+.FormPage {
+    font-size: 14px;
+    max-width: 600px;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    background-color: var(--primaryColor);
+    color: var(--primarytextColor);
+}
+
+
+.uploadBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    margin-top: 20px;
+    padding: 5%;
+    border-radius: 7px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='7' ry='7' stroke='black' stroke-width='3' stroke-dasharray='14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    filter: var(--dashedborder);
+}
+
+.title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    color: var(--secondarytextColor);
+}
+
+.input,
+.textarea,
+.formTextInput {
+    border: 1px solid var(--primaryGrey);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 17px 25px;
+    width: 100%;
+    outline: none;
+    background-color: var(--formInputColor);
+}
+
+.formTextInput input {
+    background-color: var(--formInputColor);
+}
+
+.textarea {
+    resize: vertical;
+}
+
+.span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000;
+}
+
+.submit {
+    background: linear-gradient(to right, #eb1484, #c81cc5);
+    cursor: pointer;
+    padding: 12px 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.buttonContainer {
+    margin-top: 50px;
+    margin-bottom: 108px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.label {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--secondaryColor);
+    margin-top: 55px;
+
+}
+
+.label:first-child {
+    margin-top: 40px;
+}
+
+.img {
+    width: 137px;
+    height: 137px;
+    margin: 20px auto;
+}
+
+.uploadTitle {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000;
+    text-align: center;
+}
+
+.inputPrice {
+    border: none;
+    outline: none;
+}
+
+.select {
+    background-color: var(--formInputColor);
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: var(--primaryGrey);
+}
+
+.price {
+    border: 1px var(--primaryGrey) solid;
+    border-radius: 10px;
+
+}
+
+.priceIcon {
+    margin-left: -40px;
+    margin-top: 2px;
+    pointer-events: none;
+}
+
+.formTextInput {
+    display: flex;
+}
+
+.formTextInput input {
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.formTextInput select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: none;
+    width: 80px;
+}
+
+@media screen and (max-width: 600px) {
+    .FormPage {
+        margin-top: 27px;
+    }
+
+    .label {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .uploadBox,
+    .uploadTitle {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .uploadTitle {
+        max-width: 70%;
+    }
+
+    .buttonContainer {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 55px;
+        margin-bottom: 59px;
+    }
+}

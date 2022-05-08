@@ -1,0 +1,198 @@
+/* CSS for Home */
+
+/* @font-face {
+    font-family: 'Gotham';
+    src: url('../../fonts/GothamBook.ttf');
+} */
+
+.container {
+    max-width: 1060px;
+    margin: auto;
+}
+
+/* ---------------------------------------- BANNER ---------------------------------------- */
+
+.bannerWrapper {
+    overflow: hidden;
+}
+
+.banner {
+    display: flex;
+    position: relative;
+    background-image: linear-gradient(to right, #eb1484, #c81cc5);
+    padding: 95px 50px;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    border-radius: 25px;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.circle1 {
+    padding: 170px;
+    background-color: white;
+    opacity: 20%;
+    border-radius: 100%;
+    position: absolute;
+    top: -150px;
+    left: -150px;
+}
+
+.circle2 {
+    padding: 170px;
+    background-color: white;
+    opacity: 20%;
+    border-radius: 100%;
+    position: absolute;
+    top: 150px;
+    right: -50px;
+}
+
+.bannerContent {
+    font-family: 'Gotham' !important;
+    line-height: 50.74px;
+}
+
+/* ---------------------------------------- TOP SELLERS ---------------------------------------- */
+
+.sellers {
+    margin: auto;
+    margin-top: 60px;
+}
+
+.sellerTitle {
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--primarytextColor);
+}
+
+.sellerCont {
+    text-align: center;
+    max-height: 250px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.sellerCard {
+    display: inline-block;
+}
+
+/* ---------------------------------------- HOT BIDS ---------------------------------------- */
+
+.hotCont {
+    text-align: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 230px);
+    justify-content: space-between;
+    grid-gap: 20px;
+}
+
+.buttonContainer {
+    width: fit-content;
+    margin: 60px auto;
+}
+
+.buttonOutline {
+    padding: 9px 200px;
+    cursor: pointer;
+    outline: none;
+    color: #da18a3;
+    font-weight: bold;
+
+    border: 1px solid transparent;
+    background: linear-gradient(var(--primaryColor), var(--primaryColor)) padding-box,
+        linear-gradient(to right, #eb1484, #c81cc5) border-box;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        margin: 40px;
+    }
+    .circle1 {
+        top: -200px;
+        left: -150px;
+    }
+    .circle2 {
+        right: -10%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .banner {
+        font-size: 40px;
+        padding: 80px 40px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .circle1 {
+        padding: 100px;
+        top: -100px;
+        left: -100px;
+    }
+    .circle2 {
+        padding: 120px;
+        top: 100px;
+        right: -50px;
+    }
+    .banner {
+        font-size: 30px;
+        padding: 60px 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cardWrapper {
+        flex: 0;
+        margin: auto;
+    }
+
+    .hotCont {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+
+    .buttonOutline {
+        max-width: 300px;
+        padding: 9px 113px;
+    }
+
+    .container {
+        width: auto;
+        margin: 10px;
+    }
+
+    .banner {
+        font-size: 20px;
+        padding: 50px 16px;
+        margin-top: 30px;
+    }
+
+    .circle1 {
+        padding: 70px;
+        top: -50px;
+        left: -50px;
+    }
+
+    .circle2 {
+        padding: 100px;
+        top: 50px;
+        right: -50px;
+    }
+
+    .bannerContent {
+        line-height: 20px;
+    }
+    .sellerTitle {
+        margin-left: 20px;
+    }
+
+    .sellerCont::-webkit-scrollbar {
+        display: none;
+    }
+}

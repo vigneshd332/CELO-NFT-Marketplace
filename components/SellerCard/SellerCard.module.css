@@ -1,0 +1,106 @@
+.card {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    border: 1px solid var(--seller-card-border);
+    background-color: var(--card-bg);
+    color: var(--primarytextColor);
+    padding: 11px;
+    width: 180px;
+    height: 200px;
+    margin: 16px;
+    transition: filter 300ms;
+}
+
+.card:hover {
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.2));
+}
+
+.num {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: #da18a3;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 4.5px;
+}
+
+.dpContainer {
+    width: 77px;
+    height: 77px;
+    margin-top: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dp {
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.tick {
+    width: 15px;
+    height: 15px;
+    margin-left: -20px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.eth {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.ethNum {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 130px;
+        height: 165px;
+        padding-top: 9px;
+        padding-right: 8px;
+        padding-bottom: 9px;
+        padding-left: 8px;
+    }
+
+    .num {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        line-height: 18px;
+        padding-top: 3px;
+    }
+
+    .name {
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 3px;
+    }
+
+    .eth {
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 3px;
+        text-align: center;
+    }
+
+    .dpContainer {
+        margin-top: -2px;
+    }
+}

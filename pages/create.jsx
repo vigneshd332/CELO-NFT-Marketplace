@@ -1,7 +1,4 @@
 import React from "react";
+import CreateItem from "../components/createItem/CreateItem";
 
-const CreatePage = () => {
-	return <div>create</div>;
-};
-
-export default CreatePage;
+export default CreateItem;
