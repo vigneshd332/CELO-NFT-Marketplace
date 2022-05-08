@@ -57,29 +57,16 @@ export default function Footer(props) {
 						<section
 							className={`${styles.footerTitle} ${styles.footerRow}`}
 						>
-							Graphique NFT
+							G NFT
 						</section>
 						<section className={styles.footerRow}>Explore</section>
 						<section className={styles.footerRow}>How it Works</section>
 						<section className={styles.footerRow}>Contact Us</section>
 					</section>
-					<section className={styles.footerColumn}>
-						<section
-							className={`${styles.footerTitle} ${styles.footerRow}`}
-						>
-							Support
-						</section>
-						<section className={styles.footerRow}>Help Center</section>
-						<section className={styles.footerRow}>
-							Terms of Service
-						</section>
-						<section className={styles.footerRow}>Legal</section>
-						<section className={styles.footerRow}>Privacy Policy</section>
-					</section>
 				</section>
 			</section>
 			<section className={styles.copyright}>
-				Graphique NITT, All Rights Reserved.
+				G NFT, All Rights Reserved.
 				<p className={styles.footerSocialList}>
 					<Image
 						src={insta}

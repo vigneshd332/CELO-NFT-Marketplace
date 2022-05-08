@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styles from "./style.module.css";
 import Link from "next/link";
-import logo from "../../public/images/light2.png";
-import logoDark from "../../public/images/dark2.png";
+import logo from "../../public/images/main.png";
 import menu from "../../public/images/icons/Menu.png";
 import MobileMenu from "../mobileMenu/index.js";
 import Icon from "../Icon/Icon";
@@ -22,15 +21,7 @@ export default function Nav(props) {
 			<div className={styles.container}>
 				<div>
 					<Link href={"/"} passHref>
-						{!props.darkMode ? (
-							<Image src={logo} alt="Main Logo" className={styles.img} />
-						) : (
-							<Image
-								src={logoDark}
-								alt="Main Logo"
-								className={styles.img}
-							/>
-						)}
+						<Image src={logo} alt="Main Logo" className={styles.img} />
 					</Link>
 				</div>
 				<div className={styles.searchContainer}>
