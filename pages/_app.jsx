@@ -1,8 +1,9 @@
 import Layout from "../components/layout";
+import dynamic from "next/dynamic";
 import "../styles/globals.css";
 import { useState, useEffect } from "react";
 
-export default function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
 	const [darkMode, setDarkMode] = useState(false);
 
 	useEffect(() => {
@@ -20,3 +21,7 @@ export default function MyApp({ Component, pageProps }) {
 		</Layout>
 	);
 }
+
+export default dynamic(() => Promise.resolve(MyApp), {
+	ssr: false,
+});
