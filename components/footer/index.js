@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
-import logo from "../../public/images/Light2.png";
-import darkLogo from "../../public/images/Dark2.png";
+import logo from "../../public/images/light2.png";
+import darkLogo from "../../public/images/dark2.png";
 import insta from "../../public/images/icons/Social/instagram.svg";
 import twitter from "../../public/images/icons/Social/twitter.svg";
 import telegram from "../../public/images/icons/Social/telegram.svg";
@@ -18,14 +18,14 @@ export default function Footer(props) {
 						<section className={styles.footerTitle}>
 							<div>
 								{props.darkMode && (
-									<img
+									<Image
 										src={darkLogo}
 										alt="Main logo"
 										className={styles.footerImage}
 									/>
 								)}
 								{!props.darkMode && (
-									<img
+									<Image
 										src={logo}
 										alt="Main logo"
 										className={styles.footerImage}

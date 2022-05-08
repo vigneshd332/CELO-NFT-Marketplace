@@ -11,7 +11,7 @@ function Icon(props) {
 				<Image
 					height={props.size}
 					width={props.size}
-					src="/icons/heart.svg"
+					src={require("../../public/images/icons/heart.svg")}
 					alt=""
 				/>
 			)}
@@ -20,7 +20,7 @@ function Icon(props) {
 				<Image
 					height={props.size}
 					width={props.size}
-					src="/icons/heart-filled.svg"
+					src={require("../../public/images/icons/heart-filled.svg")}
 					alt=""
 				/>
 			)}
@@ -29,7 +29,7 @@ function Icon(props) {
 				<Image
 					height={props.size}
 					width={props.size}
-					src="/icons/search.svg"
+					src={require("../../public/images/icons/search.svg")}
 					alt=""
 				/>
 			)}
@@ -38,7 +38,7 @@ function Icon(props) {
 				<Image
 					height={props.size}
 					width={props.size}
-					src="/icons/down.svg"
+					src={require("../../public/images/icons/down.svg")}
 					alt=""
 				/>
 			)}
@@ -47,7 +47,7 @@ function Icon(props) {
 				<Image
 					height={props.size}
 					width={props.size}
-					src="/icons/close.svg"
+					src={require("../../public/images/icons/close.svg")}
 					alt=""
 				/>
 			)}
@@ -56,7 +56,7 @@ function Icon(props) {
 				<Image
 					height={props.size}
 					width={props.size}
-					src="/icons/dark-mode.png"
+					src={require("../../public/images/icons/dark-mode.png")}
 					alt=""
 				/>
 			)}

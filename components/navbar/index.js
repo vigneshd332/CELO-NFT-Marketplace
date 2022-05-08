@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./style.module.css";
 import Link from "next/link";
-import logo from "../../public/images/Light2.png";
-import logoDark from "../../public/images/Dark2.png";
+import logo from "../../public/images/light2.png";
+import logoDark from "../../public/images/dark2.png";
 import menu from "../../public/images/icons/Menu.png";
 import MobileMenu from "../mobileMenu/index.js";
 import Icon from "../Icon/Icon";
