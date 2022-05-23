@@ -1,4 +1,4 @@
-# CELO NFT Marketplace
+# CELO NFT Marketplace [Work in Progress]
 
 ### Using
 
